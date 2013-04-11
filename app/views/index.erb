@@ -4,8 +4,9 @@
       <li><a href="<%= p.url %>">
             <%= p.title %>
           </a>
-          <span>(<%= p.url %>)</span>
-      </li>
+          <span>(<%= p.url %>)</span><span><a href="/post/<%=p.id%>">(<%= p.comments.count %>)
+      </li> - <a href="/<%=p.id%>/comment">Facken talk about it!</a>
+      <a href="/post/<%= p.id %>/upvote">UpVote</a><span>(<%= p.post_votes.count %>)</span>
     <%end%>
   </ul> 
 </div>

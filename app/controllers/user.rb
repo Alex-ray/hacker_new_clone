@@ -3,7 +3,7 @@ get '/user/:user_name' do
   if params[:user_name] == current_user.user_name
     erb :user
   else 
-    redirect '/'
+    redirect to '/'
   end
 end
 

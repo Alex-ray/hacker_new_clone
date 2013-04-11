@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Your Facken post</h1>
+    <li>
+      <a href="<%= @post.url %>">
+          <%= @post.title %>
+      </a>
+      <span>(<%= @post.url %>)</span>
+    </li>
+  <% @comments.each do |comment| %>
+    <p><%= comment.body %></p>
+      <a href="/comment/<%= comment.id %>/upvote">UpVote</a><span>(<%= comment.comment_votes.count %>)</span>
+  <%end%>
+
+</div>
