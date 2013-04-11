@@ -1,0 +1,10 @@
+<div class="container">
+  <%if @errors%>
+    <p class="errors"><%= @errors %></p>
+ <%end%>
+  <form action="/login" method="post" >
+    <input type="email" name="email" placeholder="fake@facker.news" />
+    <input type="password" name="password" placeholder = "password"/>
+    <button type="submit">Log In</button>
+  </form>
+</div>
